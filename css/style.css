@@ -1,0 +1,500 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: #04092c;
+}
+.head h3{
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+.head a{
+    color:white;
+    text-decoration: none;
+}
+.head a:hover{
+    text-decoration: underline;
+}
+.phonetopper{
+    display: none;
+}
+.toper{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+}
+.toper .top{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+}
+.toper .top .toggle{
+    display: none;
+    color: #000;
+    font-size: 25px;
+}
+.toper .top .image{
+    width: 15%;
+    height: 55px;
+    margin-left: 10px;
+}
+.toper .top .image img{
+    width: 100%;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 10px;
+}
+.toper .top .middle{
+    width: 30%;
+    margin-left: 10px;
+    height: 55px;
+    margin-left: 20px;
+    position: relative;
+}
+.middle > input{
+    border: 1px solid rgb(161, 158, 158);
+    width: 75%;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 20px 10px 40px;
+}
+.middle i{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black;
+    cursor: pointer;
+}
+.toper .top .right ul{
+    margin-top: 20px;
+    list-style: none;
+   display: flex;
+   padding: 0px 10px;
+}
+.toper .top .right ul li {
+    text-transform: capitalize;
+    color: #04092c;
+    padding: 0px 10px;
+}
+ .toper .top .right ul li a{
+    text-decoration: none;
+   text-transform: uppercase;
+   font-size: 15px;
+}
+ .toper .top .right ul li a:hover{
+    background: rgba(255, 192, 203, 0.432);
+    padding: 10px; 
+    border-radius: 10px;
+}
+.toper .top .left{
+    width: 12%;
+    height: 55px;
+    margin-top: 5px;
+    display: flex;
+}
+.toper .top .left .usd{
+    width: 40%;
+    margin-top: 15px;
+    display: flex;
+    color: #04092c;
+}
+.toper .top .left .usd img{
+    width: 30px;
+    height: 20px;
+}
+.toper .top .left .usd:hover{
+    background: rgba(255, 192, 203, 0.432);
+    padding: 10px;
+    border-radius: 10px; 
+}
+.toper .top .left a{
+    width: 40%;
+    margin: 10px;
+    margin-left: 20px;
+}
+.toper .top .left a i{
+    margin-left: 10px;
+    width: 100%;
+    height: 20px;
+    font-size: 25px;
+}
+.toper .top .left a i:hover{
+    background: rgba(255, 192, 203, 0.432);
+    padding: 10px;
+    border-radius: 10px;  
+}
+.house{
+    width: 100%;
+    height: 3160px;
+}
+.house .container{
+    width: 70%;
+    height: 3150px;
+    margin: auto;
+}
+.house .container .link{
+    margin-top: 25px;
+}
+.house .container .link a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.466);
+}
+.house .container .link a:hover{
+    text-decoration: underline;
+}
+.house .container .link h1{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #04092c;
+}
+.house .container .link p{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #04092c;
+}
+.house .container .image{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.house .container .image img{
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+}
+.house .container .image .fans{
+    text-align: center;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -4px;
+    color: #04092c;
+    background-color: rgba(0, 217, 255, 0.342);
+}
+
+
+.house .container .time{
+  display: flex;
+  margin: 10px;
+  margin-left: -3px;
+}
+.house .container .time button{
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.house .container .time button i{
+    color: rgb(8, 110, 136);
+}
+.house .container .time button:hover{
+    background: rgba(8, 110, 136, 0.253);
+}
+.house .container .cody{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.house .container  .tab-buttons {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+}
+
+.house .container  .tab-button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      font-size: 17px;
+      background: none;
+      font-weight: bold;
+      transition: 0.3s;
+      color: #555;
+}
+
+.house .container .tab-button.active {
+      border-bottom: 3px solid deeppink;
+      color:#04092c;
+      border-radius: 5px;
+}
+
+.tabs-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+}
+
+.tabs-content {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+}
+.tab-panel {
+      width: 100%;
+      flex-shrink: 0;
+      padding: 15px;
+      box-sizing: border-box;
+}
+.more-text {
+    display: none;
+}
+.house .container .button {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.house .container .button .show-button {
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 120px;
+    padding: 10px 5px;
+    font-size: 1em;
+}
+.house .container .ticketer{
+    display: flex;
+    margin: 15px 0px;
+    box-shadow: 10px 10px 10px  rgba(0, 0, 0, 0.425);
+}
+.house .container  .ticketer a{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border-radius: 3px;
+    border:  0.1px solid rgba(0, 0, 0, 0.342);
+    text-decoration: none;
+}
+.house .container  .ticketer a:hover{
+    background-color: rgba(0, 0, 0, 0.068);
+}
+.house .container .date{
+    width: 60px;
+    line-height: 20px;
+    height: 70px;
+    font-size: 14px;
+    margin-left: 3px;
+    text-align: center;
+    padding: 4px 14px 0px 0px;
+}
+.house .container .date h5{
+    color: black;
+    margin-top: 5px;
+}
+.house .container .date p{
+    color: #ce3197;
+    font-weight: bold;
+    
+}
+.house .container .date h6{
+    color: black;
+    font-size: 11px;
+}
+.house .container .style{
+    width: 0.1px;
+    height: 55px;
+    margin: 9px 14px 0px 0px;
+    background: rgba(0, 0, 0, 0.267);
+}
+.house .container .location{
+     width: 80%;
+     height: 60px;
+     margin: 5px 5px 0px 5px;
+}
+.house .container .location .remian{
+    background-color: #ce3197;
+    width: 200px;
+    color: rgba(128, 0, 0, 0.877) ;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    font-size:  14px;
+
+}
+.house .container .location p{
+    color: black;
+    font-size: 14px;
+    font-weight: 200;
+}
+.house .container .location span{
+    color: rgba(0, 0, 0, 0.527);
+}
+.house .container .location .links {
+    color: #ce3197;
+    margin: 20px;
+}
+.house .container .links{
+    width: 20%;
+    margin: auto;
+}
+.house .container .links button{
+    width: 120px;
+    font-weight: bold;
+    color: #ce3197;
+    border:  1px solid #ce3197;
+    border-radius: 5px;
+    background-color: white;
+    height: 30px;
+}
+.house .container .links button:hover{
+    background: #ce319744;
+}
+.house .container2{
+    width: 100%;
+    height: 3150px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* phone view */
+
+@media only screen and (max-width: 700px){
+    .phonetopper {
+        width: 100%;
+        display: block;
+        height: 38px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+    }
+    .phonetopper .topper{
+        display: flex;
+        height: 39px;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+    .phonetopper .topper .toggle a{
+        display: block;
+        font-size: 25px;
+        margin-top: 5px;
+        color: #04092c;
+        font-weight: bold;
+    }
+    .phonetopper .topper .icon a{
+        display: block;
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: bold;
+        margin-left: -40px;
+        color: #04092c;
+    }
+    .phonetopper .image img{
+        width: 100%;
+        height: 30px;
+        margin-top: 2px;
+        margin-left: -20px;
+        border-radius: 20px;
+    }
+    .toper{
+        display: none;
+    }
+    .house .container{
+        width: 95%;
+        margin: auto;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .house .container .concerts .link a{
+        font-size: 15px;
+    }
+    .concerts p{
+        font-size: 15px;
+    }
+    .house .container .image img{
+        height: 200px;
+    }
+    .house .ticketer .links{
+        display:  none;
+    }
+    .house .container  .ticketer a {
+        width:  100%;
+        height: 140px;
+    }
+    .house .container .date{
+        height: 100px;
+        line-height: 30px;
+        margin: 20px 10px 0px 10px;
+        font-size: 16px;
+    }
+    .house .container .cody{
+        font-size: 15px;
+    }
+    .house .container .style{
+        height: 120px;
+    }
+    .house .container .location p{
+        font-size: 17px;
+        margin: 15px 5px 0px -5px;
+        font-weight: 500;
+    }
+    .house .container .location .remian{
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+    
+}
+
+
+
+
+/* tablet view */
+
+@media only screen and ( max-width: 1100px) {
+
+     .right{
+       display: none;
+    }
+    .toper .top .left{
+        display: none;
+    }
+    .toper .top .toggle {
+        display: block;
+        font-size: 30px;
+        margin-left: 50%;
+        margin-top: 10px;
+        color: black;
+    }
+    .toper .top .toggle i{
+        color: #04092c;
+    }
+    .house .container{
+        width: 95%;
+    }
+    
+ }
+ 
