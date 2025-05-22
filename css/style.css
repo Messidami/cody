@@ -134,7 +134,7 @@
 }
 .house{
     width: 100%;
-    height: 3160px;
+    height: auto;
 }
 .house .container{
     width: 70%;
@@ -250,6 +250,11 @@
       padding: 15px;
       box-sizing: border-box;
 }
+.house .container .tab-panel{
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
 .more-text {
     display: none;
 }
@@ -357,9 +362,36 @@
 }
 .house .container2{
     width: 100%;
-    height: 3150px;
+    height: 300px;
     margin: auto;
-    /* border: 1px solid black; */
+    border-top: 1px solid #ccc;;
+}
+.house .container2 .related{
+    margin: 20px;
+    width: 95%;
+    height: auto;
+}
+.house .container2 .related .morgans{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+}
+.house .container2 .related .morgans .morgan{
+    width: 280px;
+    margin: 10px;
+    display: flex;
+    height: 100px;
+}
+.house .container2 .related .morgans .morgan .image{
+    margin: -3px 0px 0px 8px;
+}
+.house .container2 .related .morgans .morgan .image p{
+    margin-top: 5px;
+}
+.house .container2 .related .morgans .morgan img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 
@@ -466,6 +498,9 @@
         margin-top: 10px;
         margin-bottom: -10px;
     }
+    .house .container2 .related .morgans{
+        grid-template-columns: 1fr;
+    }
     
 }
 
@@ -474,7 +509,7 @@
 
 /* tablet view */
 
-@media only screen and ( max-width: 1100px) {
+@media only screen and ( max-width: 1000px) {
 
      .right{
        display: none;
@@ -494,6 +529,9 @@
     }
     .house .container{
         width: 95%;
+    }
+    .house .container2 .related .morgans{
+        grid-template-columns: 1fr;
     }
     
  }
