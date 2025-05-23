@@ -175,6 +175,7 @@
     text-decoration: none;
    text-transform: uppercase;
    font-size: 15px;
+   border-radius: 10px;
 }
  .toper .top .right ul li a:hover{
     background: rgba(255, 192, 203, 0.432);
