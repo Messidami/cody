@@ -25,6 +25,92 @@
 .phonetopper{
     display: none;
 }
+.phonetopper  .topper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.phonetopper .topper button{
+    background: none;
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
+    color: #0b1231;
+}
+
+.topper .search-icon a i {
+    background: none;
+    border: none;
+    margin-right:20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0b1231;
+}
+.phonetopper .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    color: #0b1231;
+    background-color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.phonetopper .sidebar.active {
+    left: 0;
+}
+
+.phonetopper .sidebar .close-btn {
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: #0b1231;
+    float: right;
+    cursor: pointer;
+}
+ .phonetopper .sidebar ul {
+    list-style: none;
+    padding: 50px 0 0;
+}
+
+.phonetopper .sidebar ul li {
+    margin: 20px 0;
+}
+
+.phonetopper .sidebar ul li a {
+    color: #0b1231;
+    border-radius: 5px;
+    padding: 5px 150px 0px 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+.phonetopper .sidebar ul li a:hover{
+        background: rgba(255, 192, 203, 0.432);
+        color: #ce3197;
+       
+}
+
+.phonetopper .sidebar .sign-in-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: #0b1231;
+    font-weight: bold;
+    cursor:pointer;
+}
+.phonetopper .sidebar .sign-in-btn:hover{
+    background: rgba(255, 192, 203, 0.432);
+    color: #ce3197;
+}
 .toper{
     width: 100%;
     height: 60px;

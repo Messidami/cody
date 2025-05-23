@@ -12,9 +12,23 @@
     <div class="head"><h3>Tickets you can trust: 100 million sold,<a href=""> 100% Buyer Guarantee.</a> Learn More</h3>.</div>
     <div class="phonetopper">
        <div class="topper">
-        <div class="toggle"><a href=""><i class="bi bi-list"></i></a></div>
-        <div class="image"><img src="css/image/OIP.jpg" alt=""></div>
-        <div class="icon"><a href=""><i class="bi bi-search"></i></a></div>
+        <button onclick="toggleSidebar()">☰</button>
+         <div class="image"><img src="css/image/OIP.jpg" alt=""></div>
+         <div class="search-icon"><a href=""><i class="bi bi-search"></i></a></div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebarMenu">
+    <button class="close-btn" onclick="toggleSidebar()">x</button>
+    <ul>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">Tickets</a></li>
+      <li><a href="#">Grant</a></li>
+      <li><a href="#">charity</a></li>
+      <li><a href="#">Donate</a></li>
+      <li><a href="#">🇺🇸 USD</a></li>
+    </ul>
+    <button class="sign-in-btn">Sign In</button></div>
        </div>
     </div>
     <div class="toper">
@@ -569,6 +583,10 @@
             button.textContent = "Show Less";
           }
         }
+
+        function toggleSidebar() {
+      document.getElementById("sidebarMenu").classList.toggle("active");
+      }
 
 
       
