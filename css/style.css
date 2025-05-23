@@ -322,10 +322,16 @@
      height: 60px;
      margin: 5px 5px 0px 5px;
 }
+.house .container .location .name{
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 15px 0px 8px  0px;
+}
 .house .container .location .remian{
-    background-color: #ce3197;
+    background-color: #ce31977e;
     width: 200px;
-    color: rgba(128, 0, 0, 0.877) ;
+    color: #6b1759;
     margin: 5px;
     text-align: center;
     border-radius: 10px;
@@ -458,8 +464,7 @@
     .house .container{
         width: 95%;
         margin: auto;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 14px;
     }
     .house .container .concerts .link a{
         font-size: 15px;
@@ -475,28 +480,33 @@
     }
     .house .container  .ticketer a {
         width:  100%;
-        height: 140px;
+        height: 120px;
     }
     .house .container .date{
         height: 100px;
-        line-height: 30px;
+        line-height: 20px;
         margin: 20px 10px 0px 10px;
-        font-size: 16px;
+        font-size: 13px;
     }
     .house .container .cody{
         font-size: 15px;
     }
     .house .container .style{
-        height: 120px;
+        height: 100px;
     }
     .house .container .location p{
-        font-size: 17px;
+        font-size: 13px;
         margin: 15px 5px 0px -5px;
         font-weight: 500;
     }
+    .house .container .location .name{
+        margin: 30px 0px -10px -5px;
+        font-size: 12px;
+    }
     .house .container .location .remian{
-        margin-top: 10px;
-        margin-bottom: -10px;
+        width: 150px;
+        margin: 10px 0px -10px -10px;
+        font-size: 10px;
     }
     .house .container2 .related .morgans{
         grid-template-columns: 1fr;
