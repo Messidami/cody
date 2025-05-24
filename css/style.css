@@ -27,6 +27,7 @@
 }
 .phonetopper  .topper {
     display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 8px 8px;
@@ -34,7 +35,7 @@
     border-bottom: 1px solid #ddd;
     position: relative;
 }
-.phonetopper .topper button{
+ .topper button{
     background: none;
     border: none;
     font-size: 25px;
@@ -50,7 +51,7 @@
     cursor: pointer;
     color: #0b1231;
 }
-.phonetopper .sidebar {
+.sidebar {
     position: fixed;
     top: 0;
     left: -100%;
@@ -62,10 +63,10 @@
     transition: left 0.3s ease;
     z-index: 1000;
 }
-.phonetopper .sidebar.active {
+.sidebar.active {
     left: 0;
 }
-.phonetopper .sidebar .cancel{
+.sidebar .cancel{
     width: 118%;
     height: 50px;
     border-radius: 5px;
@@ -73,13 +74,13 @@
     margin-right: 5px;
     background-color: #0b1231;
 }
-.phonetopper .sidebar .cancel h3{
+.sidebar .cancel h3{
     color: white;
     margin: 10px;
     position: absolute;
 }
 
-.phonetopper .sidebar .close-btn {
+.sidebar .close-btn {
     font-size: 25px;
     background: none;
     margin: 5px 15px 0px 0px;
@@ -88,29 +89,29 @@
     float: right;
     cursor: pointer;
 }
- .phonetopper .sidebar ul {
+.sidebar ul {
     list-style: none;
     padding: 40px 0 0;
 }
 
-.phonetopper .sidebar ul li {
+.sidebar ul li {
     margin: 20px 0;
 }
 
-.phonetopper .sidebar ul li a {
+.sidebar ul li a {
     color: #0b1231;
     border-radius: 5px;
     padding: 5px 150px 0px 5px;
     text-decoration: none;
     font-size: 15px;
 }
-.phonetopper .sidebar ul li a:hover{
+.sidebar ul li a:hover{
         background: rgba(255, 192, 203, 0.432);
         color: #ce3197;
        
 }
 
-.phonetopper .sidebar .sign-in-btn {
+.sidebar .sign-in-btn {
     margin-top: 30px;
     width: 100%;
     padding: 10px;
@@ -120,7 +121,7 @@
     font-weight: bold;
     cursor:pointer;
 }
-.phonetopper .sidebar .sign-in-btn:hover{
+.sidebar .sign-in-btn:hover{
     background: rgba(255, 192, 203, 0.432);
     color: #ce3197;
 }
@@ -135,10 +136,9 @@
     height: auto;
     display: flex;
 }
-.toper .top .toggle{
+.toper .top .toggle {
     display: none;
-    color: #000;
-    font-size: 25px;
+
 }
 .toper .top .image{
     width: 15%;
@@ -312,43 +312,43 @@
 }
 
 .house .container  .tab-buttons {
-      display: flex;
-      border-bottom: 2px solid #ccc;
+    display: flex;
+    border-bottom: 2px solid #ccc;
 }
 
 .house .container  .tab-button {
-      padding: 10px 20px;
-      cursor: pointer;
-      border: none;
-      font-size: 17px;
-      background: none;
-      font-weight: bold;
-      transition: 0.3s;
-      color: #555;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    background: none;
+    font-weight: bold;
+    transition: 0.3s;
+    color: #555;
 }
 
 .house .container .tab-button.active {
-      border-bottom: 3px solid deeppink;
-      color:#04092c;
-      border-radius: 5px;
+    border-bottom: 3px solid deeppink;
+    color:#04092c;
+    border-radius: 5px;
 }
 
 .tabs-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .tabs-content {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 .tab-panel {
-      width: 100%;
-      flex-shrink: 0;
-      padding: 15px;
-      box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 15px;
+    box-sizing: border-box;
 }
 .house .container .tab-panel{
     width: 100%;
@@ -475,15 +475,16 @@
 .house .container2 .related{
     margin: 20px;
     width: 95%;
+    font-size: 12px;
     height: auto;
 }
 .house .container2 .related .morgans{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     margin-top: 30px;
 }
 .house .container2 .related .morgans .morgan{
-    width: 280px;
+    width: 210px;
     margin: 10px;
     display: flex;
     height: 100px;
@@ -496,8 +497,13 @@
 }
 .house .container2 .related .morgans .morgan img{
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+}
+.container3{
+    width:  100%;
+    height: 2500px;
+    border: 1px solid yellow;
 }
 
 
@@ -530,7 +536,6 @@
         width: 100%;
         display: block;
         height: 38px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.445);
     }
     .phonetopper .topper{
         display: flex;
@@ -623,22 +628,26 @@
 /* tablet view */
 
 @media only screen and ( max-width: 1000px) {
-
-     .right{
+    .phonetopper {
+        display: block;
+    }
+    .right{
        display: none;
     }
     .toper .top .left{
         display: none;
     }
-    .toper .top .toggle {
+    .toper .top .toggle{
         display: block;
-        font-size: 30px;
         margin-left: 50%;
         margin-top: 10px;
-        color: black;
     }
-    .toper .top .toggle i{
-        color: #04092c;
+    .toper .top .toggle button{
+        background: none;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: #0b1231;
     }
     .house .container{
         width: 95%;
