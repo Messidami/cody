@@ -625,6 +625,12 @@
         margin: 10px 0px -10px -10px;
         font-size: 10px;
     }
+     .house .container2 .related{
+        margin-left: -1px;
+     }
+    .house .container2 .related h3{
+        margin: 20px 0px -20px 13px;
+     }
     .house .container2 .related .morgans{
         grid-template-columns: 1fr;
     }
