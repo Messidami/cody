@@ -558,6 +558,33 @@
 .container3 .tours .scroll .events li a:hover{
     border-bottom: 1px solid #04092c;
 }
+.container3 .artists{
+    width: 70%;
+    margin: auto;  
+    height: 300px;
+    margin-top: 50px;
+}
+.container3 .artists h4{
+    color: #04092c;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container3 .artists .listed{
+   margin-top: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(6, auto);
+   gap: 25px 30px;
+}
+.container3 .artists .listed li{
+    list-style: none;
+    color: #04092c;
+    font-weight: bold;
+    font-size: 14px;
+}
+.container3 .artists .listed li:hover{
+    color: #ce3197;
+}
 
 
 
@@ -711,6 +738,14 @@
     }
     .container3 .tours .scroll .events{
         width: 500px;
+    }
+    .container3 .artists{
+        width: 90%;
+        height: 500px;
+    }
+    .container3 .artists .listed{
+        grid-template-columns: 1fr;
+        height: auto;
     }
 }
 
