@@ -747,6 +747,9 @@
         grid-template-columns: 1fr;
         height: auto;
     }
+    .container3 .artists .listed li:hover{
+         color: #ce3197;
+     }
 }
 
 
