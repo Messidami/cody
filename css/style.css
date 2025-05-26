@@ -234,11 +234,12 @@
 }
 .house{
     width:  100%;
-    height: 3510px
+    height: auto;
 }
 .house .container{
     width: 70%;
-    height: 3150px;
+    height: auto;
+    border: 1px solid green;
     margin: auto;
 }
 .house .container .link{
@@ -504,7 +505,6 @@
 .container3{
     width:  100%;
     height: 2400px;
-    position: absolute;
     background-color: #F6F6FB;
 }
 .container3 .tours{
