@@ -9,6 +9,11 @@
     <title>CELEB</title>
 </head>
 <body>
+
+  <div id="preloader">
+    <div class="blob"></div>
+  </div>
+<div id="content" style="display: none;"></div>
     <div class="head"><h3>Tickets you can trust: 100 million sold,<a href=""> 100% Buyer Guarantee.</a> Learn More</h3>.</div>
   <div class="phonetopper">
        <div class="topper">
@@ -790,7 +795,62 @@
     <li>Jason Aldean</li>
    </div>
   </div>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="logo"><span> Cody Johnson</span></div>
+      <div class="footer-columns">
+        <div class="column">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href=""> Contact Us</a></li>
+            <li><a href=""> Event News</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Our Company</h4>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Garantia de compra</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Investor</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href="">Reliability</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="">Gift Card</a></li>
+            <li><a href="">Rewards</a></li>
+            <li><a href="">Fans Card</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <ul class="footer-links">
+            <li>@ 2025 cody  seat LLC. Todos Derchos Resrvados.</li>
+            <li><a href="">Site Map</a></li>
+            <li><a href="">Accesibilidad</a></li>
+            <li><a href="">Politica de privacidad</a></li>
+            <li><a href="">No vendas ni Compartas Mi Information</a></li>
+            <li><a href="">Terminos de Uso</a></li>
+            <li><a href="">Privacy preferences</a></li>
+          </ul>
+        </div>
+    </div>
+  </footer>
  </div>
+
+
+
+ <!-- preload -->
+
+ 
+  </div>
 
 
 
@@ -847,6 +907,12 @@
         btn.classList.toggle('active', i === index);
       });
     }
+
+     window.addEventListener("load", () => {
+     document.getElementById("preloader").style.display = "none";
+     document.getElementById("content").style.display = "block";
+   });
+
 
       </script>
 
