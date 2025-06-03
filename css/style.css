@@ -684,8 +684,8 @@
     list-style: none;
     padding: 0;
     color: #474b5e;
-    margin-top: 10px;
     display: flex;
+    margin-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
 }
