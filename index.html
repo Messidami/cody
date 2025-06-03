@@ -534,9 +534,39 @@
             </div>
       </div>
       <div class="tab-panel" id="fansPanel">
-        <h2>Fans Card</h2>
-        <p>Exclusive content or memberships here.</p>
-        <div class="image"><img src="css/image/il_340x270.4182362946_rioy.webp" alt=""></div>
+        <h1>Fans or  Membership Card</h1>
+        <div class="image2"><img src="css/image/image-default.jpg" alt=""></div>
+      <div class="fancard">
+      <h2>Join COJO Nation - Cody Johnson Official Fan Membership</h2>
+        <p>If you love real country music, rodeo roots, and honest storytelling, you’re in the right place. Welcome to COJO Nation, the official fan club for Cody Johnson fans. With exclusive access, perks, and unforgettable experiences, there’s a membership tier for every kind of fan — from die-hards to dedicated collectors.</p>
+        <h3>STANDARD MEMBERSHIP – $1000/year</h3>
+        <p>Perfect for everyday fans who want to stay close to the music and the movement.</p>
+        <h4>Include:</h4>
+        <li>Early access to presale tickets</li>
+        <li>Entry into Meet & Greet opportunities</li>
+        <li>15% off official Cody Johnson merchandise (excludes music, gift cards, memberships)</li>
+        <li>Access to exclusive COJO Nation merch</li>
+        <li>Fan newsletters and member-only updates</li>
+        <h3>PREMIUM MEMBERSHIP – $1,500/year</h3>
+        <p>For fans who want more than just music — they want the full COJO experience.</p>
+        <h4>Includes everything in STANDARD, plus:</h4>
+        <li>Guaranteed Meet & Greet with Cody at a show of your choice (pending schedule/availability)</li>
+        <li>Front row or premium seating access at one concert per year</li>
+        <li>A COJO Premium Pack with limited-edition merchandise</li>
+        <li>Priority customer support for fan club services</li>
+        <h3>VVIP MEMBERSHIP – $3,000/year</h3>
+        <p>Reserved for the ultimate fan who lives and breathes COJO. This is your backstage pass to everything.</p>
+        <h4>Includes everything in PREMIUM, plus:</h4>
+        <li>Backstage tour experience at a COJO show (pending venue approval)</li>
+        <li>Dinner or private Q&A event with Cody (select shows only)</li>
+        <li>A personalized, autographed memorabilia package</li>
+        <li>First access to all future events, tickets, and limited releases</li>
+        <li>Recognition as a VVIP Member in select official communications</li>
+        <h4>Why Join?</h4>
+        <p>COJO Nation isn’t just a fan club — it’s a community of people who believe in real music and real values. Whether you’re jamming to Cody on the ranch or on the road, we’re here to make sure you’re part of every big moment.</p>
+        <h4>GET NOW</h4>
+        <p>Find your tier. Claim your perks. Live the music.👉 [Join COJO Nation Now]</p>
+      </div>
       </div>
     </div>
   </div>
@@ -601,9 +631,6 @@
 </div>
  <div class="container3">
   <div class="tours">
-            <div class=" p-5 d-block">
-          <a href="mailto:dedeketimilehin@gmail.com" class="btn btn-warning px-3 py-5 rounded">Call me</a>
-        </div>
 
     <h4>Cody Johnson Tour Dates and Ticket Prices</h4>
     <p>Cody Johnson Tour Dates will be displayed below for any announced 2025 Cody Johnson tour dates. For all available tickets and to find shows near you, scroll to the listings at the top of this page.</p>
@@ -837,7 +864,7 @@
         <div class="column">
           <h4>Connect</h4>
           <ul>
-            <li><a href="https://wa.me/2349162552583" target="_blank"> Contact Us</a></li>
+            <li><a href="mailto:" target="_blank"> Contact Us</a></li>
             <li><a href=""> Event News</a></li>
             <li><a href="">Facebook</a></li>
             <li><a href="">Instagram</a></li>
@@ -935,14 +962,35 @@
 
 
       
-    function switchTab(index) {
-      const tabsContent = document.getElementById('tabsContent');
-      const buttons = document.querySelectorAll('.tab-button');
-      tabsContent.style.transform = `translateX(-${index *  100}%)`;
-      buttons.forEach((btn, i)=>{
-        btn.classList.toggle('active', i === index);
-      });
-    }
+   function switchTab(index) {
+  const tabsContent = document.getElementById('tabsContent');
+  const tabsContainer = document.getElementById('tabsContainer');
+  const panels = document.querySelectorAll('.tab-panel');
+  const buttons = document.querySelectorAll('.tab-button');
+
+  // Slide to the correct panel
+  tabsContent.style.transform = `translateX(-${index * 100}%)`;
+
+  // Adjust height to the visible panel
+  setTimeout(() => {
+    const activePanel = panels[index];
+    tabsContainer.style.height = activePanel.offsetHeight + 'px';
+  }, 500); // Wait for transition to complete
+
+  // Update button styles
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+}
+
+// Set initial height on page load
+window.addEventListener('load', () => {
+  const tabsContainer = document.getElementById('tabsContainer');
+  const firstPanel = document.querySelector('.tab-panel');
+  tabsContainer.style.height = firstPanel.offsetHeight + 'px';
+});
+
+
 
     window.addEventListener("load", () => {
      document.getElementById("preloader").style.display = "none";
