@@ -789,6 +789,10 @@
         margin: auto;
         font-size: 14px;
     }
+    .tab-panel .image2 img{
+        width: 100%;
+        height: 300px;
+    }
     .tab-panel .fancard{
         width: 100%;
     }
