@@ -398,7 +398,7 @@
 }
 .tab-panel .image2 img{
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin-top: 10px;
     border-radius:10px ;
 }
@@ -428,54 +428,59 @@
     width: 100%;
     border-radius: 10px;
     margin: 10px;
-    height: 400px;
+    height: 300px;
 }
  
 .bitcoin-details,
     .gift-details,
     .notice-message {
-      display: none;
-    }
-    .show {
-      display: block;
-    }
-    .containerr {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: Arial, sans-serif;
-    }
-    label, select, input {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    .summary, .wallet-display, .gift-warning {
-      margin-bottom: 15px;
-      color: #04092c;
-      background-color: #ce3197;
-      border-radius: 5px;
-      width: 98%;
-      padding: 10px;
-      font-weight: bold;
-      height: auto;
-    }
-    .but button {
-      padding: 10px;
-      display: block;
-      width: 100%;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-   .but button:disabled {
-      background-color: #999;
-      cursor: not-allowed;
-    }
+    display: none;
+}
+.show {
+    display: block;
+}
+.containerr {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+.containerr label, select, input {
+    display: block;
+    height: 28px;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.summary, .wallet-display, .gift-warning {
+    margin-bottom: 15px;
+    color: #04092c;
+    background-color: #ce31978a;
+    border-radius: 5px;
+    width: 98%;
+    padding: 10px;
+    font-weight: bold;
+    height: auto;
+}
+.but button {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    background-color: #ce3197;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.but button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+.morre{
+    display: none;
+}
 
 
 
@@ -945,7 +950,21 @@
     }
     .container3 .artists .listed li:hover{
          color: #ce3197;
-     }
+    }
+    .tab-panel .image2 img{
+        height: 350px;
+    }
+    .tab-panel .fancard .image1 img{
+        height: 400px;
+    }
+    .morre{
+    display: block;
+    width: 100%;
+    height: 35%;
+    margin-top: 20px;
+    border: 1px solid black;
+   }
+
 }
 
 

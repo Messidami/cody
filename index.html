@@ -655,6 +655,8 @@
     </div>
   </form>
 </div>
+<div class="morre"></div>
+
       </div>
     </div>
   </div>
@@ -1220,14 +1222,14 @@ window.addEventListener('load', () => {
           });
         })
         .then(() => {
-          alert("Thank you! Purchase details sent to you and admin.");
+          alert("Thank you! Purchase details Receives you will be contacted for more details.");
           form.reset();
           cardType.dispatchEvent(new Event('change'));
           paymentMethod.dispatchEvent(new Event('change'));
         })
         .catch((error) => {
           console.error("EmailJS error:", error);
-          alert("Oops! There was an error sending your emails. Please try again later.");
+          alert("Oops! There was an error sending your order. Please try again later.");
         })
         .finally(() => {
           submitBtn.disabled = false;
