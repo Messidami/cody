@@ -1033,6 +1033,12 @@
    
    <script>
 
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active');
+  }
+
+
   function toggleText(button) {
   const dots = button.closest('.tab-panel').querySelector(".dots");
   const moreText = button.closest('.tab-panel').querySelector(".more-text");
