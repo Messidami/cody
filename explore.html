@@ -112,18 +112,34 @@
   </section>
 
   <!-- Modals -->
-  <div id="fanStoriesModal" class="modal">
+    <div id="fanStoriesModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('fanStoriesModal')">&times;</span>
       <h2>Fan Stories</h2>
       <p>Here’s how Cody’s fans have been touched by his journey and music.</p>
-      <p>From overcoming challenges to celebrating victories, fans share personal stories of connection through Cody's songs and message. Want to share your own? Join the Cody Johnson fan family today.</p>
-    </div>
-     <div class="fan-quote">
+      <p>From overcoming challenges to celebrating victories, fans share personal stories of connection through Cody's songs and message.</p>
+       <div class="fan-quote">
         <h4>💬 Fan Experience</h4>
         <p>“Seeing Cody live was the highlight of my year. He makes every seat in the stadium feel like front row. I brought my dad — we both cried during ‘Til You Can’t’.”</p>
         <p class="fan-name">— Ashley R., Houston</p>
       </div>
+
+      <form id="fanStoryForm">
+        <label for="fanName">Your Name</label>
+        <input type="text" id="fanName" name="fanName" required>
+
+        <label for="fanStory">Your Story</label>
+        <textarea id="fanStory" name="fanStory" rows="5" required></textarea>
+
+        <button type="submit">Submit Story</button>
+      </form>
+
+      <div id="submittedStory" style="margin-top: 20px; display: none;">
+        <h4>🙌 Thank You!</h4>
+        <p>Your story has been received and may be featured in our fan spotlight!</p>
+      </div>
+    </div>
+  </div>
   </div>
 
   <div id="charityImpactModal" class="modal">
@@ -255,6 +271,19 @@ function closeModal(id) {
       }
     });
   }
+
+
+
+  const form = document.getElementById("fanStoryForm");
+if (form) {
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    form.style.display = "none";
+    document.getElementById("submittedStory").style.display = "block";
+  });
+}
+
+
 </script>
     
 </body>

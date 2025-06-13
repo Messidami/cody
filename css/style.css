@@ -995,6 +995,43 @@
   margin-top: 10px;
 }
 
+#fanStoryForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#fanStoryForm label {
+  margin-bottom: 5px;
+  text-align: left;
+  color: #ce3197;
+  font-weight: bold;
+}
+
+#fanStoryForm input,
+#fanStoryForm textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: inherit;
+}
+
+#fanStoryForm button {
+  background: #ce3197;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+#fanStoryForm button:hover {
+  background: #a92275;
+}
+
 .video-testimonial {
   margin-top: 30px;
 }
@@ -1008,7 +1045,7 @@
   font-size: 0.9em;
   color: #d4d4d4;
   margin-top: 8px;
-} 
+}
 
 
 
