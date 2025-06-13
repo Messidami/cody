@@ -63,52 +63,118 @@
       </div>
     </div>
 
+    
 <div class="bodyy">
-  
+
   <section class="explore-section">
-  <h2>Explore Cody Johnson’s World</h2>
-  <div class="explore-grid">
+    <h2>Explore Cody Johnson’s World</h2>
+    <div class="explore-grid">
 
-    <div class="explore-card">
-      <img src="css/image/cody_music2.jpg" alt="Cody Johnson Music">
-      <h3>Music Preview</h3>
-      <p>Listen to Cody’s  most stream song on spotify  and greatest tracks right here.</p>
-      <audio controls>
-        <source src="css/audio/WhatsApp Audio 2025-06-13 at 02.22.13_ebd1ec44.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      <div class="explore-card">
+        <img src="css/image/cody_music2.jpg" alt="Cody Johnson Music">
+        <h3>Music Preview</h3>
+        <p>Listen to some of Cody’s latest and greatest tracks right here.</p>
+        <audio controls>
+          <source src="css/audio/WhatsApp Audio 2025-06-13 at 02.22.13_ebd1ec44.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="explore-card" onclick="openModal('livePerformancesModal')">
+        <img src="css/image/cody_live.jpg" alt="Cody Live">
+        <h3>Live Performances</h3>
+        <p>Relive unforgettable concert moments and tour highlights.</p>
+        <a href="#">Watch Now</a>
+      </div>
+
+      <div class="explore-card" onclick="openModal('behindScenesModal')">
+        <img src="css/image/behind.jpg" alt="Behind the Scenes">
+        <h3>Behind the Scenes</h3>
+        <p>See what happens when the lights go off — the real Cody.</p>
+        <a href="#">Go Behind</a>
+      </div>
+
+      <div class="explore-card" onclick="openModal('fanStoriesModal')">
+        <img src="css/image/fan_stories.jpg" alt="Fan Stories">
+        <h3>Fan Stories</h3>
+        <p>Read how Cody’s music and mission changed lives.</p>
+        <a href="#">Read Stories</a>
+      </div>
+
+      <div class="explore-card" onclick="openModal('charityImpactModal')">
+        <img src="css/image/impact.jpg" alt="Charity Impact">
+        <h3>Charity Impact</h3>
+        <p>Explore causes supported by Cody and how you can help.</p>
+        <a href="#">See Impact</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="explore-card">
-      <img src="css/image/cody_live.jpg" alt="Cody Live">
-      <h3>Live Performances</h3>
-      <p>Relive unforgettable concert moments and tour highlights.</p>
-      <a href="#">Watch Now</a>
+  <!-- Modals -->
+  <div id="fanStoriesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('fanStoriesModal')">&times;</span>
+      <h2>Fan Stories</h2>
+      <p>Here’s how Cody’s fans have been touched by his journey and music.</p>
+      <p>From overcoming challenges to celebrating victories, fans share personal stories of connection through Cody's songs and message. Want to share your own? Join the Cody Johnson fan family today.</p>
     </div>
-
-    <div class="explore-card">
-      <img src="css/image/behind.jpg" alt="Behind the Scenes">
-      <h3>Behind the Scenes</h3>
-      <p>See what happens when the lights go off — the real Cody.</p>
-      <a href="#">Go Behind</a>
-    </div>
-
-    <div class="explore-card">
-      <img src="css/image/fan_stories.jpg" alt="Fan Stories">
-      <h3>Fan Stories</h3>
-      <p>Read how Cody’s music and mission changed lives.</p>
-      <a href="#">Read Stories</a>
-    </div>
-
-    <div class="explore-card">
-      <img src="css/image/impact.jpg" alt="Charity Impact">
-      <h3>Charity Impact</h3>
-      <p>Explore causes supported by Cody and how you can help.</p>
-      <a href="#">See Impact</a>
-    </div>
-
+     <div class="fan-quote">
+        <h4>💬 Fan Experience</h4>
+        <p>“Seeing Cody live was the highlight of my year. He makes every seat in the stadium feel like front row. I brought my dad — we both cried during ‘Til You Can’t’.”</p>
+        <p class="fan-name">— Ashley R., Houston</p>
+      </div>
   </div>
-</section>
+
+  <div id="charityImpactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('charityImpactModal')">&times;</span>
+      <h2>Charity Impact</h2>
+      <p>Learn more about the causes Cody supports and how you can contribute to making a difference alongside him.</p>
+      <ul>
+        <li>Veteran rehabilitation and PTSD awareness</li>
+        <li>Local community funding initiatives</li>
+        <li>Music therapy for underprivileged youth</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="behindScenesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('behindScenesModal')">&times;</span>
+      <h2>Behind the Scenes</h2>
+      <p>Get a peek into tour life, recording sessions, and exclusive off-stage moments with Cody and the team.</p>
+    </div>
+  </div>
+
+  <div id="livePerformancesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('livePerformancesModal')">&times;</span>
+      <h2>Live Performances</h2>
+      <div class="review">
+        <blockquote>
+          “Cody Johnson doesn't just perform — he commands the stage with heart, grit, and authenticity. His live shows are an electric mix of raw emotion and crowd-roaring energy. From the first guitar strum to the final encore, every moment feels personal.”
+        </blockquote>
+        <p class="review-author">— <em>Texas Tribune Music Review</em></p>
+      </div>
+
+      <div class="fan-quote">
+        <h4>💬 Fan Experience</h4>
+        <p>“Seeing Cody live was the highlight of my year. He makes every seat in the stadium feel like front row. I brought my dad — we both cried during ‘Til You Can’t’.”</p>
+        <p class="fan-name">— Ashley R., Houston</p>
+      </div>
+
+      <div class="video-testimonial">
+        <h4>🎥 Video Highlight</h4>
+        <video controls poster="images/cody_video_preview.jpg" width="100%">
+          <source src="video/cody_live_clip.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-caption">Watch Cody bring the crowd to their feet in Austin!</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
@@ -167,6 +233,27 @@
     function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('active');
+  }
+</script>
+
+
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
   }
 </script>
     
