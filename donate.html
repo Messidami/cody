@@ -72,86 +72,87 @@
   <h2>Why Support Cody & Charity?</h2>
   <p>Cody's foundation supports underprivileged youth in the music industry. Your contribution fuels scholarships, instruments, and mentorship for talented youth without financial support.</p>
 </div>
+<form id="donationForm" enctype="multipart/form-data">
+  <label>Donation Amount</label>
+  <input type="number" placeholder="$50" name="amount" required>
 
-<div class="donation">
-  <form id="donationForm">
-    <label>Donation Amount</label>
-    <input type="number" placeholder="$50" name="amount" required>
+  <label>Your Email</label>
+  <input type="email" placeholder="your@email.com" name="email" required>
 
-    <label>Your Email</label>
-    <input type="email" placeholder="your@email.com" name="email" required>
+  <label>Your Name (Dedicate your donation)</label>
+  <input type="text" placeholder="John Doe" name="donor_name">
 
-    <label>Your Name (Dedicate your donation)</label>
-    <input type="text" placeholder="John Doe" name="donor_name">
+  <label>Leave a Comment</label>
+  <textarea name="comment" placeholder="Your message..."></textarea>
 
-    <label>Leave a Comment</label>
-    <textarea name="comment" placeholder="Your message..."></textarea>
+  <input type="hidden" name="payment_method" id="paymentMethodInput">
+  <input type="hidden" name="image_links" id="image_links">
 
-    <label>Select Payment Method</label>
-    <div class="payment-options">
-      <div class="payment-option" data-method="gift">Gift Card</div>
-      <div class="payment-option" data-method="bank">Bank </div>
-      <div class="payment-option" data-method="bitcoin"> Bitcoin</div>
-      <div class="payment-option" data-method="paypal"> PayPal</div>
-    </div>
-
-    <div class="payment-details" id="gift">
-      <label>Upload Gift Card Image</label>
-      <label class="custom-upload">+<input type="file" accept="image/*" multiple onchange="previewMultipleImages(event, 'gift-preview')"></label>
-      <div class="preview-container" id="gift-preview"></div>
-      <div class="progress-bar"><div class="progress-fill" id="gift-progress"></div></div>
-
-      <label>Gift Card Name</label>
-      <input type="text" name="gift_name" placeholder="Amazon, iTunes, etc.">
-
-      <label>Gift Card Code</label>
-      <input type="text" name="gift_code">
-    </div>
-
-    <div class="payment-details" id="bank">
-      <p><strong>Bank:</strong> Music Support Bank</p>
-      <p><strong>Account Name:</strong> Cody Johnson Foundation</p>
-      <p><strong>Account Number:</strong> 1234567890</p>
-      <label>Upload Transfer Receipt</label>
-      <label class="custom-upload">+<input type="file" accept="image/*" multiple onchange="previewMultipleImages(event, 'bank-preview')"></label>
-      <div class="preview-container" id="bank-preview"></div>
-      <div class="progress-bar"><div class="progress-fill" id="bank-progress"></div></div>
-    </div>
-
- <div class="payment-details" id="bitcoin">
-  <label>Select Coin Type</label>
-  <select name="coin_type" onchange="updateCryptoDetails(this.value)">
-    <option value="btc">Bitcoin (BTC)</option>
-    <option value="eth">Ethereum (ETH)</option>
-    <option value="ltc">Litecoin (LTC)</option>
-  </select>
-
-  <div id="cryptoInfo">
-    <p><strong>Wallet Address:</strong> <span id="walletAddress">1CodyBTCWalletExample123</span>
-      <button type="button" onclick="copyAddress('walletAddress')">Copy</button>
-    </p>
-    <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?data=1CodyBTCWalletExample123&size=150x150" alt="QR Code">
+  <label>Select Payment Method</label>
+  <div class="payment-options">
+    <div class="payment-option" data-method="gift">Gift Card</div>
+    <div class="payment-option" data-method="bank">Bank </div>
+    <div class="payment-option" data-method="bitcoin"> Bitcoin</div>
+    <div class="payment-option" data-method="paypal"> PayPal</div>
   </div>
-</div>
+
+  <div class="payment-details" id="gift">
+    <label>Upload Gift Card Image</label>
+    <label class="custom-upload">+<input type="file" accept="image/*" id="imageUpload" name="images[]" multiple onchange="previewMultipleImages(event, 'gift-preview')"></label>
+    <div class="preview-container" id="gift-preview"></div>
+    <div class="progress-bar"><div class="progress-fill" id="gift-progress"></div></div>
+
+    <label>Gift Card Name</label>
+    <input type="text" name="gift_name" placeholder="Amazon, iTunes, etc.">
+
+    <label>Gift Card Code</label>
+    <input type="text" name="gift_code">
+  </div>
+
+  <div class="payment-details" id="bank">
+    <p><strong>Bank:</strong> Music Support Bank</p>
+    <p><strong>Account Name:</strong> Cody Johnson Foundation</p>
+    <p><strong>Account Number:</strong> 1234567890</p>
+    <label>Upload Transfer Receipt</label>
+    <label class="custom-upload">+<input type="file" accept="image/*" name="images[]" multiple onchange="previewMultipleImages(event, 'bank-preview')"></label>
+    <div class="preview-container" id="bank-preview"></div>
+    <div class="progress-bar"><div class="progress-fill" id="bank-progress"></div></div>
+  </div>
+
+  <div class="payment-details" id="bitcoin">
+    <label>Select Coin Type</label>
+    <select name="coin_type" onchange="updateCryptoDetails(this.value)">
+      <option value="btc">Bitcoin (BTC)</option>
+      <option value="eth">Ethereum (ETH)</option>
+      <option value="ltc">Litecoin (LTC)</option>
+    </select>
+
+    <div id="cryptoInfo">
+      <p><strong>Wallet Address:</strong> <span id="walletAddress">1CodyBTCWalletExample123</span>
+        <button type="button" onclick="copyAddress('walletAddress')">Copy</button>
+      </p>
+      <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?data=1CodyBTCWalletExample123&size=150x150" alt="QR Code">
+    </div>
+  </div>
+
+
 
 <div class="payment-details" id="paypal">
   <p><strong>PayPal Email:</strong> donate@codycharity.org</p>
   <p>Click the button below to proceed with PayPal payment.</p>
   <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank"
-     class="payment-option"
      style="display:inline-block;padding:10px 20px;background:#ce3197;color:#fff;border-radius:8px;text-decoration:none;">
     Proceed with PayPal
   </a>
 </div>
 
 
-    <button type="submit">Donate Now</button>
-  </form>
+  <button type="submit" id="submitBtn">Donate Now</button>
+</form>
 
-  <div class="thank-you" id="thankYou">
-    <h3>Thank you for supporting Cody's Charity!</h3>
-    <p>Your donation has been received.</p>
-  </div>
+<div class="thank-you" id="thankYou" style="display: none;">
+  <h3>Thank you for supporting Cody's Charity!</h3>
+  <p>Your donation has been received.</p>
 </div>
 
 <div class="foooter">&copy; 2025 Cody Johnson Foundation</div>
@@ -243,105 +244,143 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-
-
 function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('active');
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('active');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("5TB8oOoxc39o0UTx2");
+
+  const form = document.getElementById("donationForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const optionButtons = document.querySelectorAll('.payment-option[data-method]');
+  const paymentSections = document.querySelectorAll('.payment-details');
+
+  optionButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const method = btn.getAttribute('data-method');
+      document.getElementById("paymentMethodInput").value = method;
+
+      optionButtons.forEach(b => b.classList.remove('active'));
+      paymentSections.forEach(section => section.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(method).classList.add('active');
+    });
+  });
+
+  window.previewMultipleImages = function (event, previewId) {
+    const container = document.getElementById(previewId);
+    const progressBar = document.getElementById(previewId.replace('-preview', '-progress'));
+    container.innerHTML = '';
+    const files = Array.from(event.target.files);
+    let loaded = 0;
+
+    files.forEach(file => {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.classList.add('preview-img');
+        container.appendChild(img);
+        loaded++;
+        const percent = Math.floor((loaded / files.length) * 100);
+        if (progressBar) progressBar.style.width = percent + '%';
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  window.updateCryptoDetails = function (type) {
+    const addressMap = {
+      btc: "1CodyBTCWalletExample123",
+      eth: "0xCodyEthereumWallet123",
+      ltc: "LcCodyLiteWallet123"
+    };
+    const address = addressMap[type];
+    document.getElementById("walletAddress").textContent = address;
+    document.getElementById("qrCode").src = `https://api.qrserver.com/v1/create-qr-code/?data=${address}&size=150x150`;
+  };
+
+  window.copyAddress = function (id) {
+    const address = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(address).then(() => {
+      alert("Wallet address copied!");
+    });
+  };
+
+  async function uploadImagesToCloudinary(files) {
+    const uploadedUrls = [];
+    const cloudName = "dx4qqr3cc"; // 🔁 replace this
+    const uploadPreset = "codyjohnson"; // 🔁 replace this
+
+    for (const file of files) {
+      const data = new FormData();
+      data.append("file", file);
+      data.append("upload_preset", uploadPreset);
+
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+        method: "POST",
+        body: data
+      });
+
+      const result = await res.json();
+      uploadedUrls.push(result.secure_url);
+    }
+
+    return uploadedUrls;
   }
 
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Processing...";
 
-  document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("EdwkxvlHNY3KO8MNc");
+    const files = document.getElementById("imageUpload").files;
+    const imageUrls = await uploadImagesToCloudinary(files);
+    document.getElementById("image_links").value = imageUrls.join(', ');
 
-    const optionButtons = document.querySelectorAll('.payment-option[data-method]');
-    const paymentSections = document.querySelectorAll('.payment-details');
+    form.querySelector('input[name="date"]')?.remove();
+    const dateInput = document.createElement("input");
+    dateInput.type = "hidden";
+    dateInput.name = "date";
+    dateInput.value = new Date().toLocaleString();
+    form.appendChild(dateInput);
 
-    optionButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const method = btn.getAttribute('data-method');
-        optionButtons.forEach(b => b.classList.remove('active'));
-        paymentSections.forEach(section => section.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById(method).classList.add('active');
-      });
-    });
-
-
-    window.copyAddress = function (id) {
-  const address = document.getElementById(id).textContent;
-  navigator.clipboard.writeText(address).then(() => {
-    alert("Wallet address copied!");
-  });
-};
-
-window.updateCryptoDetails = function (type) {
-  const addressMap = {
-    btc: "1CodyBTCWalletExample123",
-    eth: "0xCodyEthereumWallet123",
-    ltc: "LcCodyLiteWallet123"
-  };
-  const address = addressMap[type];
-  document.getElementById("walletAddress").textContent = address;
-  document.getElementById("qrCode").src = `https://api.qrserver.com/v1/create-qr-code/?data=${address}&size=150x150`;
-};
-
-
-    window.previewMultipleImages = function (event, previewId) {
-      const container = document.getElementById(previewId);
-      const progressBar = document.getElementById(previewId.replace('-preview', '-progress'));
-      container.innerHTML = '';
-      const files = Array.from(event.target.files);
-      let loaded = 0;
-
-      files.forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = document.createElement('img');
-          img.src = e.target.result;
-          img.classList.add('preview-img');
-          container.appendChild(img);
-          loaded++;
-          const percent = Math.floor((loaded / files.length) * 100);
-          if (progressBar) progressBar.style.width = percent + '%';
+    emailjs.sendForm('service_zzxmu15', 'template_r17d6yh', form, '5TB8oOoxc39o0UTx2')
+      .then(() => {
+        const formData = new FormData(form);
+        const userData = {
+          donor_name: formData.get("donor_name"),
+          amount: formData.get("amount"),
+          comment: formData.get("comment")
         };
-        reader.readAsDataURL(file);
+
+        return emailjs.send('service_zzxmu15', 'template_qys5hbn', userData, '5TB8oOoxc39o0UTx2');
+      })
+      .then(() => {
+        document.getElementById("thankYou").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("thankYou").style.display = "none";
+        }, 6000);
+
+        form.reset();
+        document.querySelectorAll('.preview-container').forEach(c => c.innerHTML = '');
+        document.querySelectorAll('.progress-fill').forEach(p => p.style.width = '0%');
+        paymentSections.forEach(s => s.classList.remove('active'));
+        optionButtons.forEach(b => b.classList.remove('active'));
+      })
+      .catch(err => {
+        alert("Submission failed: " + JSON.stringify(err));
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Donate Now";
       });
-    };
-
-    document.getElementById("donationForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const form = this;
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      const serviceID = 'default_service';
-      const adminTemplateID = 'template_donation';
-      const userTemplateID = 'template_user_donation';
-
-      emailjs.send(serviceID, adminTemplateID, data)
-        .then(() => {
-          return emailjs.send(serviceID, userTemplateID, data);
-        })
-        .then(() => {
-          const thankYouBox = document.getElementById("thankYou");
-thankYouBox.style.display = "block";
-setTimeout(() => {
-  thankYouBox.style.display = "none";
-  }, 6000); // 6 seconds
-
-          form.reset();
-          document.querySelectorAll('.preview-container').forEach(c => c.innerHTML = '');
-          document.querySelectorAll('.progress-fill').forEach(p => p.style.width = '0%');
-          paymentSections.forEach(s => s.classList.remove('active'));
-          optionButtons.forEach(b => b.classList.remove('active'));
-        })
-        .catch(err => {
-          alert("Submission failed: " + JSON.stringify(err));
-        });
-    });
   });
+});
 </script>
     
 </body>
