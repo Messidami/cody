@@ -332,6 +332,9 @@ label{
       display: none;
       animation: fadeIn 0.4s ease-in-out;
     }
+     .payment-details p{
+        margin-bottom: 20px;
+     }
     .payment-details.active {
       display: block;
     }
