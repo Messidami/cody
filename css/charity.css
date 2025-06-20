@@ -1,0 +1,464 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.head{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: #04092c;
+}
+.head h3{
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+.head a{
+    color:white;
+    text-decoration: none;
+}
+.head a:hover{
+    text-decoration: underline;
+}
+.phonetopper{
+    display: none;
+}
+.phonetopper  .topper {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+ .topper button{
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #0b1231;
+}
+
+.topper .search-icon a i {
+    background: none;
+    border: none;
+    margin-right:20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0b1231;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    color: #0b1231;
+    background-color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+.sidebar.active {
+    left: 0;
+}
+.sidebar .cancel{
+    width: 118%;
+    height: 50px;
+    border-radius: 5px;
+    margin: -20px;
+    margin-right: 5px;
+    background-color: #0b1231;
+}
+.sidebar .cancel h3{
+    color: white;
+    margin: 10px;
+    position: absolute;
+}
+
+.sidebar .close-btn {
+    font-size: 25px;
+    background: none;
+    margin: 5px 15px 0px 0px;
+    border: none;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 40px 0 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #0b1231;
+    border-radius: 5px;
+    padding: 5px 150px 0px 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+.sidebar ul li a:hover{
+        background: rgba(255, 192, 203, 0.432);
+        color: #ce3197;
+       
+}
+
+.sidebar .sign-in-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 192, 203, 0.432);
+    color: #0b1231;
+    font-weight: bold;
+    cursor:pointer;
+}
+.sidebar .sign-in-btn:hover{
+    background: rgba(255, 192, 203, 0.432);
+    color: #ce3197;
+}
+.toper{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+}
+.toper .top{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+}
+.toper .top .toggle {
+    display: none;
+
+}
+.toper .top .image{
+    width: 15%;
+    height: 55px;
+    margin-left: 10px;
+}
+.toper .top .image img{
+    width: 100%;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 10px;
+}
+.toper .top .middle{
+    width: 30%;
+    margin-left: 10px;
+    height: 55px;
+    margin-left: 20px;
+    position: relative;
+}
+.middle > input{
+    border: 1px solid rgb(161, 158, 158);
+    width: 75%;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 20px 10px 40px;
+}
+.middle i{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black;
+    cursor: pointer;
+}
+.toper .top .right ul{
+    margin-top: 20px;
+    list-style: none;
+   display: flex;
+   padding: 0px 10px;
+}
+.toper .top .right ul li {
+    text-transform: capitalize;
+    padding: 0px 10px;
+}
+.my-button{
+     color: #162281 !important;
+}
+ .toper .top .right ul li a{
+    text-decoration: none;
+   text-transform: uppercase;
+   font-size: 17px;
+   border-radius: 10px;
+}
+ .toper .top .right ul li a:hover{
+    background: rgba(255, 192, 203, 0.432);
+    padding: 10px; 
+    border-radius: 10px;
+}
+.toper .top .left{
+    width: 12%;
+    height: 55px;
+    margin-top: 5px;
+    display: flex;
+}
+.toper .top .left .usd{
+    width: 40%;
+    margin-top: 15px;
+    display: flex;
+    color: #04092c;
+}
+.toper .top .left .usd img{
+    width: 30px;
+    height: 20px;
+}
+.toper .top .left .usd:hover{
+    background: rgba(255, 192, 203, 0.432);
+    padding: 10px;
+    border-radius: 10px; 
+}
+.toper .top .left a{
+    width: 40%;
+    margin: 10px;
+    margin-left: 20px;
+}
+.toper .top .left a i{
+    margin-left: 10px;
+    width: 100%;
+    height: 20px;
+    font-size: 25px;
+}
+.toper .top .left a i:hover{
+    background: rgba(255, 192, 203, 0.432);
+    padding: 10px;
+    border-radius: 10px;  
+}
+
+  h1, h3, p {
+      color: #0b1231;
+    }
+
+    .btn-custom {
+      background-color: #ce3197;
+      color: #fff;
+      border: 2px solid #ce3197;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: transparent;
+      color: #ce3197;
+    }
+
+    .img-div {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .img-div:hover {
+      transform: scale(1.03);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title h3 {
+      color: #ce3197;
+      font-weight: 700;
+    }
+
+    .section-title h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background: url(image/vs-mark-half.png) no-repeat right top;
+    background-color: #0b1231;
+    color: white;
+    padding:  50px 20px;
+}
+.footer .logo{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.footer .logo span{
+    font-weight: 400;
+    color: #fff;
+}
+.footer .footer-columns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer .footer-columns .column{
+    flex: 1 1 200px;
+    margin: 20px;
+}
+.footer .footer-columns .column h4{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.footer .footer-columns .column ul{
+    list-style: none;
+    padding: 0;
+}
+.footer .footer-columns .column ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+.footer .footer-columns .column ul li a:hover{
+    text-decoration: underline;
+}
+.footer  .footer-bottom{
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 13px;
+}
+.footer .footer-links{
+    list-style: none;
+    padding: 0;
+    color: #474b5e;
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer .footer-links li a{
+    color: #474b5e;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 730px){
+    .head h3{
+        font-size: 10px;
+    }
+    .phonetopper {
+        width: 100%;
+        background-color: white;
+        display: block;
+        height: auto;
+    }
+    .phonetopper .topper{
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+    .phonetopper .topper .toggle a{
+        display: block;
+        font-size: 25px;
+        margin-top: 5px;
+        color: #04092c;
+        font-weight: bold;
+    }
+    .phonetopper .topper .icon a{
+        display: block;
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: bold;
+        margin-left: -40px;
+        color: #04092c;
+    }
+    .phonetopper .topper .image img{
+        display:  block;
+        height: 30px;
+        margin-top: 2px;
+        margin-left: -20px;
+        border-radius: 20px;
+    }
+    .toper{
+        display: none;
+    }
+    .payment-option {
+    flex: 1 1 100%;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+}
+
+
+
+
+/* tablet view */
+
+@media only screen and ( max-width: 1100px) {
+    .phonetopper {
+        display: block;
+    }
+    .right{
+       display: none;
+    }
+    .toper .top .left{
+        display: none;
+    }
+    .toper .top .toggle{
+        display: block;
+        margin-left: 50%;
+        margin-top: 10px;
+    }
+    .toper .top .toggle button{
+        background: none;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: #0b1231;
+    }
+}
